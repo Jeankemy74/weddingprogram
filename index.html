@@ -81,6 +81,48 @@
             margin-top: 20px;
         }
 
+        .clickable {
+            cursor: pointer;
+            color: #8B001A; /* Rouge grenat */
+            text-decoration: underline;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .popup-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
         @media (max-width: 480px) {
             body {
                 padding: 10px;
@@ -104,158 +146,142 @@
     <div id="contenu">
         <h1>Programme du Mariage</h1>
         
-        <div class="event">
-            <span class="event-title">Dernière publication :</span>
-            <span class="event-description">Pasteur Robens VERSAILLE</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Chant par l'assemblée :</span>
-            <span class="event-description">CALEEN</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Prière d'invocation :</span>
-            <span class="event-description">Pasteur Amaziase MOROSE</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Lecture du Cantique des Cantiques 4 : 1-16 :</span>
-            <span class="event-description">Sr Stella Barbara Day. Osias</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Echange des voeux :</span>
-            <span class="event-description">Pasteur Robens VERSAILLE</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Chant spécial :</span>
-            <span class="event-description">Groupe les adoratrices de la Mission Première Eglise de la nouvelle Alliance de Jésus-Christ</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Engagement des conjoints :</span>
-            <span class="event-description">Pasteur Robens VERSAILLE</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Prière de consécration :</span>
-            <span class="event-description">Le corps pastoral (Past Amaziase, Past Richeler, Past Robens)</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Moment d'adoration :</span>
-            <span class="event-description">CALEEN</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Sermon de circonstance :</span>
-            <span class="event-description">Pasteur Richeler Antoine</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Signature de l'acte :</span>
-            <span class="event-description">CALEEN (Version instrumentale)</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Chant Spécial :</span>
-            <span class="event-description">EVEEN</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Présentation du nouveau couple :</span>
-            <span class="event-description">Pasteur Amaziase MOROSE</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Chant par l'assemblée :</span>
-            <span class="event-description">CALEEN</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Remerciements spéciaux :</span>
-            <span class="event-description">Netopha ST-LOUIS</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Prière finale :</span>
-            <span class="event-description">Fr.Wendy NERETTE</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Bénédiction :</span>
-            <span class="event-description">Pasteur Robens VERSAILLE</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Sortie du Cortège :</span>
-            <span class="event-description"></span>
+        <h2>ENTRÉE DU CORTÈGE NUPTIAL</h2>
+
+        <h2>Noms des officiants</h2>
+        <div class="group">
+            <div class="group-item">1. Pasteur Versaille Robens</div>
+            <div class="group-item">2. Pasteur Amazias Morose</div>
+            <div class="group-item">3. Pasteur Yves St Elois</div>
+            <div class="group-item">4. Pasteur Paul-Anson Fonrose</div>
         </div>
 
-        <h2>Membres d'accueil</h2>
+        <h2>Les filles d'honneur</h2>
         <div class="group">
-            <div class="group-item">Angelot CALIXTE</div>
-            <div class="group-item">Joseph CHARLES</div>
-            <div class="group-item">Sterlande ALEXANDRE</div>
-            <div class="group-item">Nadine NORCOLUS</div>
-            <div class="group-item">Kedny ST-FORT</div>
-            <div class="group-item">Kardie ELMIRA</div>
-            <div class="group-item">Chancelie JOSEPH</div>
-            <div class="group-item">Nerline ST-FLEUR</div>
-            <div class="group-item">Marie Lucie DOMINGUE</div>
-            <div class="group-item">Ketza DORCY</div>
-        </div>
-
-        <h2>Cortège Nuptial</h2>
-        <div class="group">
-            <div class="group-item"><strong>Maitre de Cérémonie :</strong> Netopha ST-LOUIS</div>
-            <div class="group-item"><strong>Officiants :</strong></div>
-            <div class="group-item">Pasteur Robens VERSAILLE</div>
-            <div class="group-item">Pasteur Richeler ANTOINE</div>
-            <div class="group-item">Pasteur Amaziase MOROSE</div>
-            <div class="group-item">Sr Stella Barbara DAY OSIAS</div>
-            <div class="group-item">Fr Wendy NERETTE</div>
-        </div>
-
-        <h2>Protocole</h2>
-        <div class="group">
-            <div class="group-item">Darvens ADAM & Dieulinda GEORGES</div>
-            <div class="group-item">Darbens NORISTON & Lorvely LAMOUR</div>
-            <div class="group-item">Burshley ANTOINE & Esther LAMOUR</div>
-            <div class="group-item">Kemsley MOROSE & Darbensline NORISTON</div>
-            <div class="group-item">Marc-Kennley JEAN BAPTISTE & Marie Flore ST-FLEUR</div>
-            <div class="group-item">Ritchèlot ANTOINE & Rose Nerlie DEROSIER</div>
+            <div class="group-item">1. Marie Lucie DOMINGUE</div>
+            <div class="group-item">2. Jeanne Sterline PIERRE</div>
+            <div class="group-item">3. Melissa CAZEAU</div>
+            <div class="group-item">4. Rebecca LAZARD</div>
+            <div class="group-item">5. Gedeline JOSEPH</div>
+            <div class="group-item">6. Lovelie JOSEPH</div>
         </div>
 
         <h2>Les témoins</h2>
         <div class="group">
-            <div class="group-item">Jean Kemy MOROSE & Micheline C. CHARLES</div>
+            <div class="group-item">Esther VALSAINT & Joël LAZARD</div>
         </div>
 
-        <h2>Porteur de Bible & Chant d'espérance</h2>
+        <h2>Le Fiancé et sa Mère</h2>
         <div class="group">
-            <div class="group-item">Richeley ANTOINE & Déborah PHILIZAIRE</div>
+            <div class="group-item">Josiase PHILIPPE / Marijeo ESTAMAR</div>
         </div>
 
-        <h2>Fiancé</h2>
+        <h2>Porteur de Bible</h2>
         <div class="group">
-            <div class="group-item">Briny PHILIZAIRE & sa Tante (Edith LOUIS)</div>
+            <div class="group-item">Nochard DIMANCHE</div>
         </div>
 
-        <h2>Porteur d'anneaux</h2>
+        <h2>Porteur d'alliance</h2>
         <div class="group">
-            <div class="group-item">Horace PIERRE & Imana PIERRE</div>
+            <div class="group-item">Jefferson VALSAINT & Kenia CASIMIR</div>
         </div>
 
-        <h2>Semeuse de pétales</h2>
+        <h2>Annonceuse</h2>
         <div class="group">
-            <div class="group-item">Saskia Woudnaëlle CHARLES</div>
-            <div class="group-item">Ritahana ALY</div>
+            <div class="group-item">Louisa VALSAINT</div>
         </div>
 
-        <h2>Annonceuses</h2>
+        <h2>La Fiancée</h2>
         <div class="group">
-            <div class="group-item">Christmerlie MICHEL</div>
-            <div class="group-item">Florencha ANTOINE</div>
+            <div class="group-item">Sodeline BERENO</div>
         </div>
 
-        <h2>Fiancée</h2>
-        <div class="group">
-            <div class="group-item">Belleta LAMOUR & Sa mère Spirituelle (Marie Flore ANTOINE)</div>
+        <h2>PROGRAMMATION</h2>
+        <div class="event">
+            <span class="event-title">Maitre de cérémonie :</span>
+            <span class="event-description">Me. Francia ALTIDOR</span>
+        </div>
+        <div class="event">
+            <span class="event-title">Introduction & dernière publication :</span>
+            <span class="event-description">Past. Versaille Robens</span>
+        </div>
+        <div class="event">
+            <span class="event-title">Chant :</span>
+            <span class="event-description">204 F.C : Yoselie Jeune</span>
+        </div>
+        <div class="event">
+            <span class="event-title">Prière d'invocation :</span>
+            <span class="event-description">Past. Amaziaz Morose</span>
+        </div>
+        <div class="event">
+            <span class="event-title">Lecture 1 :</span>
+            <span class="event-description"><span class="clickable" onclick="showPopup()">1 Corinthiens 13</span></span>
+        </div>
+        <div class="event">
+            <span class="event-title">Echange de voeux :</span>
+            <span class="event-description">Past. Versaille Robens</span>
+        </div>
+        <div class="event">
+            <span class="event-title">Chant spécial :</span>
+            <span class="event-description">Worship fully</span>
+        </div>
+        <div class="event">
+            <span class="event-title">Homélie de circonstance :</span>
+            <span class="event-description">Past. Yves St.Elois</span>
+        </div>
+        <div class="event">
+            <span class="event-title">Présentation du nouveau couple :</span>
+            <span class="event-description">Past. Versaille Robens</span>
+        </div>
+        <div class="event">
+            <span class="event-title">Chant par l'assemblée :</span>
+            <span class="event-description">312 FCD (Éternel répands ta paix)</span>
+        </div>
+        <div class="event">
+            <span class="event-title">Signature de l'acte :</span>
+            <span class="event-description">Chant spécial (Junior PIERRE)</span>
+        </div>
+        <div class="event">
+            <span class="event-title">Remerciements spéciaux :</span>
+            <span class="event-description">Francia ALTIDOR</span>
+        </div>
+        <div class="event">
+            <span class="event-title">Prière finale et bénédiction :</span>
+            <span class="event-description">Pasteur Paul-Anson Fonrose</span>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="hidePopup()">&times;</span>
+            <h2>1 Corinthiens 13</h2>
+            <p>
+                1 Quand je parlerais les langues des hommes et des anges, si je n'ai pas la charité, je suis un airain qui résonne, ou une cymbale qui retentit.<br>
+                2 Et quand j'aurais le don de prophétie, la science de tous les mystères et toute la connaissance, quand j'aurais même toute la foi jusqu'à transporter des montagnes, si je n'ai pas la charité, je ne suis rien.<br>
+                3 Et quand je distribuerais tous mes biens pour la nourriture des pauvres, quand je livrerais même mon corps pour être brûlé, si je n'ai pas la charité, cela ne me sert de rien.<br>
+                4 La charité est patiente, elle est pleine de bonté; la charité n'est point envieuse; la charité ne se vante point, elle ne s'enfle point d'orgueil,<br>
+                5 elle ne fait rien de malhonnête, elle ne cherche point son intérêt, elle ne s'irrite point, elle ne soupçonne point le mal,<br>
+                6 elle ne se réjouit point de l'injustice, mais elle se réjouit de la vérité;<br>
+                7 elle excuse tout, elle croit tout, elle espère tout, elle supporte tout.<br>
+                8 La charité ne périt jamais. Les prophéties prendront fin, les langues cesseront, la connaissance disparaîtra.<br>
+                9 Car nous connaissons en partie, et nous prophétisons en partie,<br>
+                10 mais quand ce qui est parfait sera venu, ce qui est partiel disparaîtra.<br>
+                11 Lorsque j'étais enfant, je parlais comme un enfant, je pensais comme un enfant, je raisonnais comme un enfant; lorsque je suis devenu homme, j'ai fait disparaître ce qui était de l'enfant.<br>
+                12 Aujourd'hui nous voyons au moyen d'un miroir, d'une manière obscure, mais alors nous verrons face à face; aujourd'hui je connais en partie, mais alors je connaîtrai comme j'ai été connu.<br>
+                13 Maintenant donc ces trois choses demeurent: la foi, l'espérance, la charité; mais la plus grande de ces choses, c'est la charité.
+            </p>
         </div>
     </div>
 
     <script>
-        // Définir la date et l'heure de fin du mariage (exemple : 21 juillet 2024 à 23h59)
-        const finMariage = new Date('2024-07-27T13:00:00').getTime();
+        // Définir la date et l'heure de fin du mariage (demain de 15:00 à 17:00)
+        const maintenant = new Date();
+        const demain = new Date(maintenant.getFullYear(), maintenant.getMonth(), maintenant.getDate() + 1);
+        const debutMariage = new Date(demain.getFullYear(), demain.getMonth(), demain.getDate(), 15, 0, 0);
+        const finMariage = new Date(demain.getFullYear(), demain.getMonth(), demain.getDate(), 17, 0, 0);
 
         function mettreAJourContenu() {
-            const maintenant = new Date().getTime();
+            const maintenant = new Date();
             if (maintenant > finMariage) {
                 document.getElementById('contenu').innerHTML = `
                     <h1>Merci d'être venu à notre mariage !</h1>
@@ -263,25 +289,47 @@
                 `;
                 // Arrêter la vérification une fois que le contenu a été mis à jour
                 clearInterval(intervalId);
+            } else if (maintenant >= debutMariage && maintenant <= finMariage) {
+                // Optionnel : Vous pouvez ajouter ici un message spécial pendant le mariage si vous le souhaitez
             }
         }
 
-        // Calculer le temps restant jusqu'à la fin du mariage
-        const tempsRestant = finMariage - new Date().getTime();
+        // Calculer le temps restant jusqu'au début du mariage
+        const tempsRestant = debutMariage.getTime() - new Date().getTime();
 
         if (tempsRestant > 0) {
-            // Si le mariage n'est pas encore terminé, définir un timeout pour mettre à jour le contenu à l'heure exacte
-            setTimeout(mettreAJourContenu, tempsRestant);
+            // Si le mariage n'a pas encore commencé, définir un timeout pour commencer les vérifications au début du mariage
+            setTimeout(() => {
+                mettreAJourContenu();
+                // Vérifier toutes les minutes pendant le mariage
+                intervalId = setInterval(mettreAJourContenu, 5000);
+            }, tempsRestant);
         } else {
-            // Si le mariage est déjà terminé, mettre à jour le contenu immédiatement
+            // Si le mariage a déjà commencé ou est terminé, commencer les vérifications immédiatement
             mettreAJourContenu();
+            intervalId = setInterval(mettreAJourContenu, 5000);
         }
-
-        // Vérifier toutes les minutes au cas où la page resterait ouverte longtemps
-        const intervalId = setInterval(mettreAJourContenu, 5000);
 
         // Vérifier immédiatement au chargement de la page
         mettreAJourContenu();
+
+        // Fonction pour afficher le popup
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        // Fonction pour cacher le popup
+        function hidePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        // Fermer le popup si l'utilisateur clique en dehors
+        window.onclick = function(event) {
+            var popup = document.getElementById('popup');
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
