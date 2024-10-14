@@ -3,276 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programme du Mariage</title>
+    <title>INSPECTION GÉNÉRALE DE FINANCES (IGF) - Programme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
-
-        :root {
-            --terra-cotta: #E2725B;
-            --terra-cotta-light: #F5D6CC;
-            --terra-cotta-dark: #B85C48;
-        }
-
         body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f7f5;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        #contenu {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 40px;
+            font-family: 'Roboto Flex', sans-serif;
             max-width: 800px;
-            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .header {
             text-align: center;
-        }
-
-        h1, h2 {
-            font-family: 'Playfair Display', serif;
-            color: var(--terra-cotta-dark);
-        }
-
-        h1 {
-            font-size: 2.5em;
             margin-bottom: 30px;
         }
-
-        h2 {
-            font-size: 1.8em;
-            margin-top: 30px;
+        .logo {
             margin-bottom: 20px;
         }
-
-        .event {
-            background-color: var(--terra-cotta-light);
+        .logo img {
+            max-width: 200px;
+        }
+        h1, h2 {
+            margin: 10px 0;
+        }
+        .program-item {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
             border-radius: 5px;
             padding: 15px;
             margin-bottom: 15px;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            text-align: left;
         }
-
-        .event-title {
-            font-weight: 700;
-            margin-right: 10px;
-            color: var(--terra-cotta-dark);
-        }
-
-        .event-description {
-            font-size: 1.1em;
-        }
-
-        .group {
-            margin-bottom: 30px;
-        }
-
-        .group-item {
-            margin-bottom: 10px;
-        }
-
-        .clickable {
-            cursor: pointer;
-            color: var(--terra-cotta);
-            text-decoration: underline;
-        }
-
-        .popup {
-            display: none;
+        .time-container {
             position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
         }
-
-        .popup-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 10px;
+        .time-badge {
+            background-color: #ff0000;
+            color: #ffffff;
+            font-size: 24px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
         }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
+        .thank-you {
+            text-align: center;
+            font-size: 36px;
             font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-
-            #contenu {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            .event {
-                flex-direction: column;
-            }
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
-    <div id="contenu">
-        <h1>Programme du Mariage</h1>
-        
-        <h2>ENTRÉE DU CORTÈGE NUPTIAL</h2>
-
-        <h2>Noms des officiants</h2>
-        <div class="group">
-            <div class="group-item">1. Pasteur Robens Versaille</div>
-            <div class="group-item">2. Pasteur Amaziase Morose</div>
-            <div class="group-item">3. Pasteur Rony Janvier</div>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="IGF Logo">
         </div>
+        <h1>INSPECTION GÉNÉRALE DE FINANCES (IGF)</h1>
+        <h2>Lancement Exercice Fiscal<br/>2024-2025</h2>
+    </div>
 
-        <h2>Les filles d'honneur et garçons d'honneur</h2>
-        <div class="group">
-            <div class="group-item">Daina Lee T. Valcin et Rousseau Angeler B. Valcin</div>
-            <div class="group-item">Monica Barthelus et Clodomir A.D. Vernet</div>
-            <div class="group-item">Marie Lovelie A. Lazarre et Lionel M. Guillaume</div>
-            <div class="group-item">Taïna Cenatus et Pierre Marvin Charles</div>
-            <div class="group-item">Naphtalie Tullus et Kenny F. Bissainthe</div>
-            <div class="group-item">Lidgie C. Joseph et Jean Kemy Morose</div>
+    <div id="program-content">
+        <div class="program-item">
+            <h3>Propos d'ouverture de la cérémonie</h3>
+            <p>Maitres de Cérémonie</p>
         </div>
 
-        <h2>Les témoins</h2>
-        <div class="group">
-            <div class="group-item">Harry Jefferson Chery & Florence Jean Vernet</div>
+        <div class="program-item">
+            <h3>Prière et La Dessalinienne</h3>
         </div>
 
-        <h2>Le Fiancé et ses sœurs</h2>
-        <div class="group">
-            <div class="group-item">James Joseph, Katenca Saintus Joseph, Lidgie Christelle Joseph</div>
+        <div class="program-item">
+            <h3>Mots de la Direction Générale</h3>
+            <p>IGCE, Goethie Varnelle Morency</p>
         </div>
 
-        <h2>Porteur de Bible</h2>
-        <div class="group">
-            <div class="group-item">Damian Raphael Ernest Lexine</div>
+        <div class="program-item">
+            <h3>Mots de la Ministre</h3>
+            <p>Marie D. A. Ketleen FLORESTAL</p>
         </div>
 
-        <h2>Porteur d'alliance</h2>
-        <div class="group">
-            <div class="group-item">Noah Nathanaël Lavasseur</div>
+        <div class="program-item">
+            <h3>Remise de Certificats "Formation en Secourisme"/Croix-Rouge haïtienne</h3>
+            <p>Propos d'un Formateur de la Croix-Rouge</p>
         </div>
 
-        <h2>Annonceuse</h2>
-        <div class="group">
-            <div class="group-item">Mischaëlla Morose</div>
+        <div class="program-item">
+            <h3>Remise de certificats "Stagiaires à l'IGF"</h3>
+            <p>Propos du Doyen de L'UP</p>
+            <p>Propos du Doyen de l'UNDH</p>
         </div>
 
-        <h2>La Fiancée et son père</h2>
-        <div class="group">
-            <div class="group-item">Valone Yanka Vernet et Vladimir Vernet</div>
+        <div class="program-item">
+            <h3>Remise de Certificats "Formation d'Intégration au Métier de Fonctionnaire"</h3>
+            <p>Me Endy Frédéric ; IG Cadens Cadet et IGCE, Goethie Varnelle Morency</p>
         </div>
 
-        <h2>PROGRAMMATION</h2>
-        <div class="event">
-            <span class="event-title">Maître de cérémonie :</span>
-            <span class="event-description">Michel Joseph</span>
+        <div class="program-item">
+            <h3>Remise de Certificats "Développement Personnel"/IDEO</h3>
+            <p>Propos de la Directrice</p>
         </div>
-        <div class="event">
-            <span class="event-title">Dernière publication :</span>
-            <span class="event-description">Pasteur Robens Versaille</span>
+
+        <div class="program-item">
+            <h3>Présentation et prestation de serment de (02) Nouveaux-Fonctionnaires</h3>
+            <p>Mme Michaële Zéphir et Mme Kaïna Grand-Pierre</p>
         </div>
-        <div class="event">
-            <span class="event-title">Chant :</span>
-            <span class="event-description">O jour béni jour de victoire (par Rev Amaziase Morose)</span>
+
+        <div class="program-item">
+            <h3>Remise des Distinctions et des récompenses aux Fonctionnaires-Modèles</h3>
+            <p>Me Endy Frédéric et IGCE, Goethie Varnelle Morency</p>
+            <p>Mots des Fonctionnaires-Modèles</p>
         </div>
-        <div class="event">
-            <span class="event-title">Prière d'invocation :</span>
-            <span class="event-description">Rev. Amaziase Morose</span>
+
+        <div class="program-item">
+            <h3>Propos et distinction à l'endroit de l'IGCE, Guy Romero LATRY</h3>
+            <p>IGCE, Goethie Varnelle Morency</p>
         </div>
-        <div class="event">
-            <span class="event-title">Lecture :</span>
-            <span class="event-description"><span class="clickable" onclick="showPopup()"> par Vladimir Vernet</span></span>
+
+        <div class="program-item">
+            <h3>Anniversaire de IG Cadens CADET et de l'Inspecteur Medjine DESRIVIERES</h3>
         </div>
-        <div class="event">
-            <span class="event-title">Échange de vœux :</span>
-            <span class="event-description">Rev. Robens Versaille</span>
+
+        <div class="program-item">
+            <h3>Présentation du bilan et rapport d'activités 2023-2024</h3>
+            <p>IG Jean Amax ANTOINE</p>
         </div>
-        <div class="event">
-            <span class="event-title">Chant spécial :</span>
-            <span class="event-description">Mme Eunice Claude Bonamy</span>
+
+        <div class="program-item">
+            <h3>Présentation des perspectives et projection sur les 20 ans de l'IGF</h3>
+            <p>IG Dendy DESNOYERS</p>
         </div>
-        <div class="event">
-            <span class="event-title">Sermon de circonstance :</span>
-            <span class="event-description">Rev. Rony Janvier</span>
+
+        <div class="program-item">
+            <h3>Remise des Cadeaux</h3>
         </div>
-        <div class="event">
-            <span class="event-title">Présentation du nouveau couple :</span>
-            <span class="event-description">Rev. Robens Versaille</span>
+
+        <div class="program-item">
+            <h3>Prise de Vue</h3>
         </div>
-        <div class="event">
-            <span class="event-title">Chant par l'assemblée :</span>
-            <span class="event-description">Grand Dieu nous te bénissant (1er strophe)</span>
+
+        <div class="program-item">
+            <h3>Partie Musicale</h3>
+            <p>Interprétation de Samuel EXANTUS, Saxophoniste</p>
+            <p>Interprétation de Saraika, Chanteuse</p>
         </div>
-        <div class="event">
-            <span class="event-title">Signature de l'acte :</span>
-            <span class="event-description">Morceau spécial par l'orchestre</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Remerciements et salutation d'usage :</span>
-            <span class="event-description">Michel Joseph</span>
-        </div>
-        <div class="event">
-            <span class="event-title">Prière finale et bénédiction :</span>
-            <span class="event-description">Rev. Amaziase Morose</span>
+
+        <div class="program-item">
+            <h3>Buffet</h3>
         </div>
     </div>
 
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <h2>1 Corinthiens 13</h2>
-            <p>[Contenu du chapitre 1 Corinthiens 13]</p>
-        </div>
+    <div class="time-container">
+        <div class="time-badge" id="current-time"></div>
     </div>
 
     <script>
-        function showPopup() {
-            document.getElementById('popup').style.display = 'block';
+    function updateTime() {
+        const now = new Date();
+        const hours = now.getHours() % 12 || 12;
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        const ampm = now.getHours() >= 12 ? 'PM' : 'AM';
+        document.getElementById('current-time').textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+        
+        checkTimeAndRefresh(now);
+    }
+
+    function checkTimeAndRefresh(now) {
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+
+        if (hours === 3 && minutes === 0 && seconds === 0) {
+            location.reload();
+        } else if (hours === 3 && minutes === 41 && seconds === 0) {
+            document.getElementById('program-content').innerHTML = '<div class="thank-you">Merci d\'être venu</div>';
+            location.reload();
         }
+    }
 
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
+    setInterval(updateTime, 1000);
+    updateTime();
+</script>
 
-        // Simuler la durée de la cérémonie (5 minutes pour la démonstration)
-        const ceremonyDuration = 120 * 60 * 1000; // 5 minutes en millisecondes
-
-        setTimeout(() => {
-            document.getElementById('contenu').innerHTML = '<h1>Merci d\'être venu à notre cérémonie Nuptiale</h1>';
-        }, ceremonyDuration);
-    </script>
 </body>
 </html>
