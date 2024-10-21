@@ -4,155 +4,308 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INSPECTION GÉNÉRALE DE FINANCES (IGF) - Programme</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Roboto Flex', sans-serif;
-            max-width: 800px;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f0f0f0;
+            padding: 2rem;
         }
+
         .header {
-            text-align: center;
-            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
         }
+
         .logo {
-            margin-bottom: 20px;
+            width: 120px;
+            height: 120px;
+            min-width: 120px;
+            background-color: #f0f0f0;
+            border-radius: 60px;
+            overflow: hidden;
         }
+
         .logo img {
-            max-width: 200px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-        h1, h2 {
-            margin: 10px 0;
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;  /* Réduit l'espace entre les lignes */
         }
+
+        .header-content h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .header-content h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #2c5282;
+        }
+
+        .header-content h3 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #4a5568;
+        }
+
+        .header-content h4 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2563eb;
+            background-color: #fff7ed;
+            display: inline-block;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            margin-top: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 3rem 0 1.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
         .program-item {
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
         }
+
+        .program-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        .program-item h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c5282;
+            margin-bottom: 0.5rem;
+        }
+
+        .program-item p {
+            color: #4a5568;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .program-item .signature {
+            font-weight: 700;
+        }
+
+        .program-item p:last-child {
+            margin-bottom: 0;
+        }
+
         .time-container {
             position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
         }
+
         .time-badge {
-            background-color: #ff0000;
-            color: #ffffff;
-            font-size: 24px;
-            padding: 10px 20px;
-            border-radius: 25px;
-            display: inline-block;
+            background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            box-shadow: 0 2px 4px rgba(229, 62, 62, 0.3);
         }
+
         .thank-you {
             text-align: center;
-            font-size: 36px;
-            font-weight: bold;
-            margin-top: 50px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c5282;
+            margin-top: 4rem;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 1rem;
+            }
+
+            .logo {
+                margin: 0 auto;
+            }
+
+            .header-content h1 {
+                font-size: 1.75rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .time-container {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .time-badge {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
-            <img src="logo.png" alt="IGF Logo">
-        </div>
-        <h1>INSPECTION GÉNÉRALE DE FINANCES (IGF)</h1>
-        <h2>Lancement Exercice Fiscal<br/>2024-2025</h2>
-    </div>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="/api/placeholder/200/200" alt="IGF Logo">
+            </div>
+            <div class="header-content">
+                <h1>INSPECTION GÉNÉRALE DE FINANCES (IGF)</h1>
+                <h2>Mercredi 06 Novembre 2024</h2>
+                <h3>Cérémonie officielle de lancement de l'Exercice Fiscal 2024-2025</h3>
+                <h4>9h - 16h</h4>
+            </div>
+        </header>
 
-    <div id="program-content">
-        <div class="program-item">
-            <h3>Propos d'ouverture de la cérémonie</h3>
-            <p>Maitres de Cérémonie</p>
-        </div>
+        <main id="program-content">
+            <h2 class="section-title">Première partie</h2>
 
-        <div class="program-item">
-            <h3>Prière et La Dessalinienne</h3>
-        </div>
+            <div class="program-item">
+                <h3>Propos d'ouverture de la cérémonie</h3>
+                <p>Maîtres de Cérémonie</p>
+            </div>
 
-        <div class="program-item">
-            <h3>Mots de la Direction Générale</h3>
-            <p>IGCE, Goethie Varnelle Morency</p>
-        </div>
+            <div class="program-item">
+                <h3>La Dessalinienne</h3>
+                <p>Interprétation par M. Délice / <span class="signature">Mme FRANÇOIS</span></p>
+            </div>
 
-        <div class="program-item">
-            <h3>Mots de la Ministre</h3>
-            <p>Marie D. A. Ketleen FLORESTAL</p>
-        </div>
+            <div class="program-item">
+                <h3>Mots de la Direction Générale</h3>
+                <p>IGCE, <span class="signature">Goethie Varnelle MORENCY</span></p>
+            </div>
 
-        <div class="program-item">
-            <h3>Remise de Certificats "Formation en Secourisme"/Croix-Rouge haïtienne</h3>
-            <p>Propos d'un Formateur de la Croix-Rouge</p>
-        </div>
+            <div class="program-item">
+                <h3>Mots de la Ministre</h3>
+                <p><span class="signature">Marie D. A. Ketleen FLORESTAL</span></p>
+            </div>
 
-        <div class="program-item">
-            <h3>Remise de certificats "Stagiaires à l'IGF"</h3>
-            <p>Propos du Doyen de L'UP</p>
-            <p>Propos du Doyen de l'UNDH</p>
-        </div>
+            <div class="program-item">
+                <h3>Présentation du bilan et rapport d'activités 2023-2024</h3>
+                <p>IG <span class="signature">Jean Amax ANTOINE</span></p>
+            </div>
 
-        <div class="program-item">
-            <h3>Remise de Certificats "Formation d'Intégration au Métier de Fonctionnaire"</h3>
-            <p>Me Endy Frédéric ; IG Cadens Cadet et IGCE, Goethie Varnelle Morency</p>
-        </div>
+            <div class="program-item">
+                <h3>Présentation des perspectives et projection sur les 20 ans de l'IGF</h3>
+                <p>IG <span class="signature">Dendy DESNOYERS</span></p>
+            </div>
 
-        <div class="program-item">
-            <h3>Remise de Certificats "Développement Personnel"/IDEO</h3>
-            <p>Propos de la Directrice</p>
-        </div>
+            <div class="program-item">
+                <h3>Remise des Distinctions et des récompenses aux Fonctionnaires-Modèles</h3>
+                <p>IGCE, <span class="signature">Goethie Varnelle MORENCY</span> et Me <span class="signature">Endy FREDERIC</span>, Directeur des Ressources Humaines</p>
+            </div>
 
-        <div class="program-item">
-            <h3>Présentation et prestation de serment de (02) Nouveaux-Fonctionnaires</h3>
-            <p>Mme Michaële Zéphir et Mme Kaïna Grand-Pierre</p>
-        </div>
+            <div class="program-item">
+                <h3>Présentation et prestation de serment de (02) Nouveaux-Fonctionnaires</h3>
+                <p>Mme <span class="signature">Michaële ZEPHIR</span> et Mme <span class="signature">Kaïna GRAND-PIERRE</span></p>
+            </div>
 
-        <div class="program-item">
-            <h3>Remise des Distinctions et des récompenses aux Fonctionnaires-Modèles</h3>
-            <p>Me Endy Frédéric et IGCE, Goethie Varnelle Morency</p>
-            <p>Mots des Fonctionnaires-Modèles</p>
-        </div>
+            <div class="program-item">
+                <h3>Propos et distinction à l'endroit de l'IGCE</h3>
+                <p><span class="signature">Guy Romero LATRY</span></p>
+            </div>
 
-        <div class="program-item">
-            <h3>Propos et distinction à l'endroit de l'IGCE, Guy Romero LATRY</h3>
-            <p>IGCE, Goethie Varnelle Morency</p>
-        </div>
+            <div class="program-item">
+                <h3>Collation</h3>
+            </div>
 
-        <div class="program-item">
-            <h3>Anniversaire de IG Cadens CADET et de l'Inspecteur Medjine DESRIVIERES</h3>
-        </div>
+            <h2 class="section-title">Deuxième partie</h2>
 
-        <div class="program-item">
-            <h3>Présentation du bilan et rapport d'activités 2023-2024</h3>
-            <p>IG Jean Amax ANTOINE</p>
-        </div>
+            <div class="program-item">
+                <h3>Remise de certificats "Stagiaires à l'IGF"</h3>
+                <p>Me <span class="signature">Endy FREDERIC</span></p>
+                <p>Propos de circonstance du Doyen de L'Université de Port-au-Prince (UP)</p>
+            </div>
 
-        <div class="program-item">
-            <h3>Présentation des perspectives et projection sur les 20 ans de l'IGF</h3>
-            <p>IG Dendy DESNOYERS</p>
-        </div>
+            <div class="program-item">
+                <h3>Remise de Certificats "Formation d'Intégration au Métier de Fonctionnaire"</h3>
+                <p>Me <span class="signature">Endy FREDERIC</span> ; IG <span class="signature">Cadens CADET</span> et IGCE, <span class="signature">Goethie Varnelle MORENCY</span></p>
+            </div>
 
-        <div class="program-item">
-            <h3>Remise des Cadeaux</h3>
-        </div>
+            <div class="program-item">
+                <h3>Remise de Certificats "Formation en Secourisme"/Croix-Rouge Haïtienne</h3>
+                <p>Propos du Représentant de la Croix-Rouge Haïtienne</p>
+            </div>
 
-        <div class="program-item">
-            <h3>Prise de Vue</h3>
-        </div>
+            <div class="program-item">
+                <h3>Remise de Certificats "Développement Personnel"/IDEO</h3>
+                <p>Propos de la Directrice</p>
+            </div>
 
-        <div class="program-item">
-            <h3>Partie Musicale</h3>
-            <p>Interprétation de Samuel EXANTUS, Saxophoniste</p>
-            <p>Interprétation de Saraika, Chanteuse</p>
-        </div>
+            <h2 class="section-title">Troisième partie</h2>
 
-        <div class="program-item">
-            <h3>Buffet</h3>
-        </div>
+            <div class="program-item">
+                <h3>Toast de Succès pour l'Exercice Fiscal 2024-2025</h3>
+            </div>
+
+            <div class="program-item">
+                <h3>Prise de Vue officielles du Personnel 2024-2025</h3>
+            </div>
+
+            <div class="program-item">
+                <h3>Animation Musicale - Moment de convivialité</h3>
+                <p>Interprétation de <span class="signature">Samuel EXANTUS</span>, Saxophoniste</p>
+                <p>Interprétation de <span class="signature">Saraika</span>, Chanteuse</p>
+            </div>
+
+            <div class="program-item">
+                <h3>Clôture</h3>
+            </div>
+        </main>
     </div>
 
     <div class="time-container">
@@ -160,33 +313,31 @@
     </div>
 
     <script>
-    function updateTime() {
-        const now = new Date();
-        const hours = now.getHours() % 12 || 12;
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const seconds = now.getSeconds().toString().padStart(2, '0');
-        const ampm = now.getHours() >= 12 ? 'PM' : 'AM';
-        document.getElementById('current-time').textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
-        
-        checkTimeAndRefresh(now);
-    }
-
-    function checkTimeAndRefresh(now) {
-        const hours = now.getHours();
-        const minutes = now.getMinutes();
-        const seconds = now.getSeconds();
-
-        if (hours === 3 && minutes === 0 && seconds === 0) {
-            location.reload();
-        } else if (hours === 3 && minutes === 41 && seconds === 0) {
-            document.getElementById('program-content').innerHTML = '<div class="thank-you">Merci d\'être venu</div>';
-            location.reload();
+        function updateTime() {
+            const now = new Date();
+            const hours = now.getHours() % 12 || 12;
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const ampm = now.getHours() >= 12 ? 'PM' : 'AM';
+            
+            document.getElementById('current-time').textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+            
+            checkTimeAndRefresh(now);
         }
-    }
 
-    setInterval(updateTime, 1000);
-    updateTime();
-</script>
+        function checkTimeAndRefresh(now) {
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
 
+            if (hours === 16 && minutes === 0 && seconds === 0) {
+                document.getElementById('program-content').innerHTML = '<div class="thank-you">Merci d\'être venu</div>';
+                location.reload();
+            }
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
 </body>
 </html>
